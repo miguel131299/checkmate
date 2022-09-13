@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  color: black;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.question {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.menu {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.bold {
+  color: black;
+  font-weight: 700;
+}
