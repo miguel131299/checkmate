@@ -1,6 +1,6 @@
 import "../styles/Menu.css";
 
-export default function Menu() {
+export default function Menu(props) {
   return (
     <div className="menu-container">
       <div className="menu--info-container">
@@ -10,10 +10,10 @@ export default function Menu() {
         </div>
         <div className="menu--user-info menu--section">
           <div className="menu--user-point">
-            Points: <span className="bold score">1850</span>
+            Points: <span className="bold score">{props.score}</span>
           </div>
           <div className="menu--user-level ">
-            Level: <span className="bold score">Semi-expert</span>
+            Level: <span className="bold score">{props.difficulty}</span>
           </div>
         </div>
       </div>

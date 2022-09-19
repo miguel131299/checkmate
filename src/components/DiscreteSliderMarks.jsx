@@ -28,7 +28,7 @@ function valuetext(value) {
   return `${value}°C`;
 }
 
-export default function DiscreteSliderMarks() {
+export default function DiscreteSliderMarks(props) {
   return (
     <Box sx={{ width: 600 }}>
       <Slider
@@ -39,6 +39,7 @@ export default function DiscreteSliderMarks() {
         marks={marks}
         min={0}
         max={4}
+        onChangeCommitted={props.sliderChange}
       />
     </Box>
   );

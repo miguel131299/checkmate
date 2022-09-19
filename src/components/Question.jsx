@@ -1,7 +1,7 @@
 import "../styles/Question.css";
 import DiscreteSliderMarks from "./DiscreteSliderMarks";
 
-export default function Question() {
+export default function Question(props) {
   return (
     <div className="question-container">
       <div className="question--content-container">
@@ -13,28 +13,27 @@ export default function Question() {
               alt=""
             />
             <div className="question--title-container">
-              <h2 className="question--title">
-                Corona Vaccine is 103% deadly!
-              </h2>
-              <p className="question--source">Source: TUM Student Forum</p>
+              <h2 className="question--title">{props.title}</h2>
+              <p className="question--source">Source: {props.source}</p>
             </div>
           </div>
-          <p className="question--content-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </p>
+          <p className="question--content-text">{props.text}</p>
         </div>
       </div>
       <div className="question--answer-container">
         <h3 className="question--answer-question">
           What do you think of this article?
         </h3>
-        <DiscreteSliderMarks className="question--answer-slider" />
-        <button className="question--answer-button">Next Question</button>
+        <DiscreteSliderMarks
+          className="question--answer-slider"
+          sliderChange={props.sliderChange}
+        />
+        <button
+          className="question--answer-button"
+          onClick={() => props.buttonClick(5)}
+        >
+          Next Question
+        </button>
       </div>
     </div>
   );
