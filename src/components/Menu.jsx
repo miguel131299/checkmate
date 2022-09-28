@@ -5,7 +5,11 @@ export default function Menu(props) {
     <div className="menu-container">
       <div className="menu--info-container">
         <div className="menu--user-greeting menu--section">
-          <img src="./images/user-icon.png" alt="" />
+          <img
+            src="./images/user-icon.png"
+            alt=""
+            className="menu--user-greeting-img"
+          />
           <h2>Hi, Test User!</h2>
         </div>
         <div className="menu--user-info menu--section">

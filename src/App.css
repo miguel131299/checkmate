@@ -1,3 +1,12 @@
+:root {
+  --lighter-green: rgba(171, 245, 211, 0.25);
+  --light-green: rgba(171, 245, 211, 0.56);
+  --dark-green: #90dea4;
+  --darker-green: #1f9b3e;
+  --white: #ffffff;
+  --gray: #7b7b7b;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -26,4 +35,11 @@ body {
 .bold {
   color: black;
   font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
 }
