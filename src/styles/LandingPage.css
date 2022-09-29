@@ -1,0 +1,242 @@
+.lp-container {
+  background-color: var(--lighter-green);
+}
+
+/* HEADER */
+
+.lp--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  bottom: 1.5em;
+}
+
+.lp--logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.lp--logo {
+  width: 80%;
+}
+
+.lp--logo-slogan {
+  position: relative;
+  bottom: 1.5em;
+  font-family: "Questrial", sans-serif;
+}
+
+.lp--sign-buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lp--button {
+  border: none;
+  width: 90%;
+  margin: 0em 1em;
+  padding: 1em;
+  border-radius: 1.5em;
+}
+
+.lp--sign-in-button {
+  background: none;
+}
+
+.lp--sign-in-button:hover {
+  background: var(--dark-green);
+}
+
+.lp--sign-up-button {
+  background-color: var(--darker-green);
+  color: var(--white);
+}
+
+.lp--sign-up-button:hover {
+  background-color: var(--dark-green);
+}
+
+@media screen and (min-width: 992px) {
+  .lp--header {
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: static;
+    padding: 0;
+  }
+
+  .lp--logo-container {
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+  }
+
+  .lp--logo {
+    width: 50%;
+    max-width: 325px;
+    object-fit: cover;
+  }
+
+  .lp--logo-slogan {
+    position: relative;
+    top: 5px;
+    width: fit-content;
+  }
+
+  .lp--sign-buttons-container {
+    width: 30%;
+    justify-content: flex-end;
+  }
+
+  .lp--button {
+    font-size: 1.2rem;
+  }
+}
+
+/* MAIN CONTENT */
+
+.lp--main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 1em;
+}
+
+.lp--main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.lp--main-title {
+  margin-bottom: 1em;
+}
+
+.lp--main-description {
+  width: 60%;
+  margin-bottom: 3em;
+}
+
+.lp--main-button {
+  width: 100%;
+  background-color: var(--white);
+  padding: 1em;
+  margin-bottom: 2em;
+  border-radius: 1.5em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.lp--main-button:hover {
+  background-color: var(--darker-green);
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.lp--main-img {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .lp--main-container {
+    flex-direction: row;
+  }
+
+  .lp--main-text {
+    align-items: flex-start;
+    text-align: left;
+    width: 45%;
+    padding: 1em 3em;
+    margin: 1em 4em 1em 2em;
+  }
+
+  .lp--main-title {
+    font-size: 4rem;
+    width: 80%;
+    margin-bottom: 0.4em;
+  }
+
+  .lp--main-description {
+    margin-bottom: 2em;
+    font-size: 1.3rem;
+    width: 100%;
+  }
+
+  .lp--main-button {
+    font-size: 1.5rem;
+  }
+
+  .lp--main-img-container {
+    width: 40%;
+  }
+}
+
+/* FACTS */
+
+.lp--trivia-container {
+  background-color: var(--white);
+  padding: 1em;
+}
+
+.lp--trivia-question {
+  margin-bottom: 1em;
+}
+
+.lp--facts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lp--fact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid black;
+}
+
+.lp--fact-container:last-child {
+  border: none;
+}
+
+.lp--fact-title {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.lp--fact-description {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .lp--facts-container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  .lp--trivia-question {
+    margin-left: 4em;
+  }
+
+  .lp--fact-container {
+    width: 18%;
+    border: none;
+  }
+
+  .lp--fact-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+  }
+}

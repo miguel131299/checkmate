@@ -2,9 +2,10 @@
   --lighter-green: rgba(171, 245, 211, 0.25);
   --light-green: rgba(171, 245, 211, 0.56);
   --dark-green: #90dea4;
-  --darker-green: #1f9b3e;
+  --darker-green: #194e51;
   --white: #ffffff;
   --gray: #7b7b7b;
+  --black: black;
 }
 
 * {
@@ -17,29 +18,11 @@ body {
   color: black;
 }
 
-.App {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+button {
+  cursor: pointer;
+  transition-duration: 0.5s;
 }
 
-.question {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
-.menu {
-  grid-column-start: 4;
-  grid-column-end: 5;
-}
-
-.bold {
-  color: black;
-  font-weight: 700;
-}
-
-@media screen and (max-width: 992px) {
-  .App {
-    display: flex;
-    flex-direction: column;
-  }
+button:active {
+  scale: 0.9;
 }

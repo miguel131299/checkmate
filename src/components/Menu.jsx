@@ -1,6 +1,10 @@
 import "../styles/Menu.css";
+import { Context } from "../Context";
+import { useContext } from "react";
 
-export default function Menu(props) {
+export default function Menu() {
+  const { score, currentQuestion } = useContext(Context);
+
   return (
     <div className="menu-container">
       <div className="menu--info-container">
@@ -14,10 +18,11 @@ export default function Menu(props) {
         </div>
         <div className="menu--user-info menu--section">
           <div className="menu--user-point">
-            Points: <span className="bold score">{props.score}</span>
+            Points: <span className="bold score">{score}</span>
           </div>
           <div className="menu--user-level ">
-            Level: <span className="bold score">{props.difficulty}</span>
+            Level:{" "}
+            <span className="bold score">{currentQuestion.difficulty}</span>
           </div>
         </div>
       </div>
@@ -25,7 +30,7 @@ export default function Menu(props) {
         <img
           className="menu--logo"
           src="./images/CheckMate Logo Transparent Background.png"
-          alt=""
+          alt="Checkmate Logo"
         />
         <p className="menu--logo-slogan">A project of TUM Junge Akademie</p>
       </div>

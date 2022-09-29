@@ -1,7 +1,12 @@
+import { Context } from "../Context";
+import { useContext } from "react";
 import "../styles/Question.css";
 import DiscreteSliderMarks from "./DiscreteSliderMarks";
 
-export default function Question(props) {
+export default function Question() {
+  const { currentQuestion, changeSliderValue, buttonClick } =
+    useContext(Context);
+
   return (
     <div className="question-container">
       <div className="question--content-container">
@@ -13,11 +18,13 @@ export default function Question(props) {
               alt=""
             />
             <div className="question--title-container">
-              <h2 className="question--title">{props.title}</h2>
-              <p className="question--source">Source: {props.source}</p>
+              <h2 className="question--title">{currentQuestion.title}</h2>
+              <p className="question--source">
+                Source: {currentQuestion.source}
+              </p>
             </div>
           </div>
-          <p className="question--content-text">{props.text}</p>
+          <p className="question--content-text">{currentQuestion.content}</p>
         </div>
       </div>
       <div className="question--answer-container">
@@ -26,11 +33,11 @@ export default function Question(props) {
         </h3>
         <DiscreteSliderMarks
           className="question--answer-slider"
-          sliderChange={props.sliderChange}
+          sliderChange={changeSliderValue}
         />
         <button
           className="question--answer-button"
-          onClick={() => props.buttonClick(5)}
+          onClick={() => buttonClick(5)}
         >
           Next Question
         </button>

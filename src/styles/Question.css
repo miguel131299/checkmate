@@ -107,9 +107,6 @@
 
   padding: 0.5em;
   margin-top: 2em;
-
-  cursor: pointer;
-  transition-duration: 0.3s;
 }
 
 .question--answer-button:hover {
@@ -117,7 +114,7 @@
 }
 
 .question--answer-button:active {
-  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+  scale: 0.9;
 }
 
 @media screen and (max-width: 992px) {
