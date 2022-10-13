@@ -33,7 +33,7 @@ function LandingPage() {
             Test your knowledge with our "fake" news and compete with your
             friends
           </p>
-          <Link to="/game">
+          <Link to="/register">
             <button className="lp--main-button">Let's get started!</button>
           </Link>
         </div>

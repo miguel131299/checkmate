@@ -1,0 +1,267 @@
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration--content {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .registration-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+  }
+}
+/* HEADER */
+
+.registration--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.registration--logo {
+  width: 60%;
+}
+
+.registration--logo-slogan {
+  font-family: "Questrial", sans-serif;
+  position: relative;
+  bottom: 15px;
+}
+
+/* FORM */
+
+.registration--form-container {
+  padding: 1em;
+}
+
+.registration--form-title {
+  margin-bottom: 1em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registration--field-container {
+  margin: 1em 0;
+  font-size: 1.2rem;
+}
+
+input[type="number"] {
+  background-color: var(--light-gray);
+  padding: 1em;
+}
+
+input[type="number"],
+input[type="range"] {
+  width: 100%;
+  border: none;
+  height: 2em;
+  margin-top: 0.5em;
+  border-radius: 0.5em;
+}
+
+input[type="radio"] {
+  margin: 0 2em 0 1em;
+  cursor: pointer;
+}
+
+input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: var(--dark-green);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="range"] {
+  height: 25px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: var(--light-green);
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid var(--light-green);
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: var(--dark-green);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: var(--light-green);
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: var(--light-green);
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid var(--light-green);
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: var(--light-green);
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: var(--light-green);
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type="range"]::-ms-fill-upper {
+  background: var(--light-green);
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid var(--light-green);
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: var(--light-green);
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: var(--light-green);
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: var(--light-green);
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration--submit-button {
+  width: 50%;
+  margin: 0 auto;
+  align-self: center;
+  background-color: var(--darker-green);
+  color: var(--white);
+  padding: 1em;
+  border: none;
+  border-radius: 0.8em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 2em;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.registration--submit-button:hover {
+  background-color: var(--dark-green);
+}
+
+@media screen and (min-width: 992px) {
+  .registration--header {
+    position: relative;
+    bottom: 50px;
+  }
+
+  .registration--logo {
+    width: 50%;
+  }
+
+  .registration--form-container {
+    margin: auto;
+    width: 70%;
+    position: relative;
+    bottom: 30px;
+  }
+
+  .registration--submit-button {
+    position: relative;
+    top: 40px;
+  }
+}
+
+/* PICTURE */
+
+.registration--picture-container {
+  background-color: var(--lighter-green);
+}
+
+.registration--picture {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .registration--picture-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .registration--picture {
+    width: 50%;
+  }
+}
