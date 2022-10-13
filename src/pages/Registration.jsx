@@ -6,11 +6,15 @@ function Registration() {
     <div className="registration-container">
       <div className="registration-content">
         <div className="registration--header">
-          <img
-            className="registration--logo"
-            src="./images/CheckMate Logo Transparent Background.png"
-            alt=""
-          />
+          <Link to="/">
+            <div className="logo-container">
+              <img
+                className="registration--logo"
+                src="./images/CheckMate Logo Transparent Background.png"
+                alt=""
+              />
+            </div>
+          </Link>
           <p className="registration--logo-slogan">
             A project of TUM Junge Akademie
           </p>
