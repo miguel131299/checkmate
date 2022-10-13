@@ -7,11 +7,13 @@ function LandingPage() {
       <header className="lp--header">
         <div className="lp--logo-container">
           <Link to="/">
-            <img
-              className="lp--logo"
-              src="./images/CheckMate Logo Transparent Background.png"
-              alt="Checkmate Logo"
-            />
+            <div className="logo-container">
+              <img
+                className="lp--logo"
+                src="./images/CheckMate Logo Transparent Background.png"
+                alt="Checkmate Logo"
+              />
+            </div>
           </Link>
           <p className="lp--logo-slogan">A project of TUM Junge Akademie</p>
         </div>
