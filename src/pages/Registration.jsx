@@ -70,7 +70,7 @@ function Registration() {
               </label>
             </div>
 
-            <Link to="/game">
+            <Link to="/game" style={{ textDecoration: "none" }}>
               <div className="submit-container">
                 <input
                   type="submit"
