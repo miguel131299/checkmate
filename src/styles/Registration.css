@@ -253,18 +253,19 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .registration--picture-container {
   background-color: var(--lighter-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
 }
 
 .registration--picture {
-  width: 100%;
+  width: 80%;
 }
 
 @media screen and (min-width: 992px) {
   .registration--picture-container {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .registration--picture {
