@@ -141,7 +141,7 @@
 }
 
 .lp--main-button:hover {
-  background-color: var(--darker-green);
+  background-color: var(--dark-green);
   color: var(--white);
   border-color: var(--white);
 }
