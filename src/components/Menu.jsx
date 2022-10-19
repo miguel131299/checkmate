@@ -35,7 +35,7 @@ export default function Menu() {
             alt="Checkmate Logo"
           />
         </Link>
-        <p className="menu--logo-slogan">A project of TUM Junge Akademie</p>
+        <p className="menu--logo-slogan">A project of TUM: Junge Akademie</p>
       </div>
     </div>
   );

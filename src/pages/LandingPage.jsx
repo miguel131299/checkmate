@@ -15,7 +15,7 @@ function LandingPage() {
               />
             </div>
           </Link>
-          <p className="lp--logo-slogan">A project of TUM Junge Akademie</p>
+          <p className="lp--logo-slogan">A project of TUM: Junge Akademie</p>
         </div>
 
         <div className="lp--sign-buttons-container">

@@ -1,7 +1,11 @@
 import "../styles/Registration.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../Context";
 
 function Registration() {
+  const { user, handleRegistrationChange } = useContext(Context);
+
   return (
     <div className="registration-container">
       <div className="registration-content">
@@ -16,7 +20,7 @@ function Registration() {
             </div>
           </Link>
           <p className="registration--logo-slogan">
-            A project of TUM Junge Akademie
+            A project of TUM: Junge Akademie
           </p>
         </div>
 
@@ -26,23 +30,53 @@ function Registration() {
             <div className="registration--field-container">
               <label htmlFor="">
                 Age: <br />
-                <input type="number" placeholder="18" />
+                <input
+                  type="number"
+                  placeholder="18"
+                  onChange={handleRegistrationChange}
+                  name="age"
+                  value={user.age}
+                />
               </label>
             </div>
 
             <div className="registration--field-container">
               <label htmlFor="">
                 Gender: <br />
-                <input type="radio" name="gender" />
+                <input
+                  type="radio"
+                  name="gender"
+                  value={"male"}
+                  checked={user.gender === "male"}
+                  onChange={handleRegistrationChange}
+                />
                 <label htmlFor="">Male</label>
                 <br />
-                <input type="radio" name="gender" />
+                <input
+                  type="radio"
+                  name="gender"
+                  value={"female"}
+                  checked={user.gender === "female"}
+                  onChange={handleRegistrationChange}
+                />
                 <label htmlFor="">Female</label>
                 <br />
-                <input type="radio" name="gender" />
+                <input
+                  type="radio"
+                  name="gender"
+                  value={"diverse"}
+                  checked={user.gender === "diverse"}
+                  onChange={handleRegistrationChange}
+                />
                 <label htmlFor="">Diverse</label>
                 <br />
-                <input type="radio" name="gender" />
+                <input
+                  type="radio"
+                  name="gender"
+                  value={"noAnswer"}
+                  checked={user.gender === "noAnswer"}
+                  onChange={handleRegistrationChange}
+                />
                 <label htmlFor="">No Answer</label>
                 <br />
               </label>
@@ -51,7 +85,13 @@ function Registration() {
             <div className="registration--field-container">
               <label htmlFor="media-consumption">
                 How much media do you consume in a week? <br />
-                <input type="number" min={0} placeholder="3" />
+                <input
+                  type="number"
+                  placeholder="3"
+                  onChange={handleRegistrationChange}
+                  name="mediaConsumtion"
+                  value={user.mediaConsumtion}
+                />
               </label>
             </div>
 
@@ -59,7 +99,15 @@ function Registration() {
               <label htmlFor="self-assessment">
                 In your opinion, how well can you detect fake news? (from 1 to
                 5) <br />
-                <input type="range" min={1} max={5} list="tickmarks" />
+                <input
+                  type="range"
+                  min={1}
+                  max={5}
+                  list="tickmarks"
+                  onChange={handleRegistrationChange}
+                  name="fakeNewsDetection"
+                  value={user.fakeNewsDetection}
+                />
                 <datalist id="tickmarks">
                   <option value="1" label="1"></option>
                   <option value="2" label="2"></option>
