@@ -19,7 +19,6 @@ export default function Question() {
 
   function showPictures() {
     if (inInterventionGroup && showFeedback) {
-      console.log("inside");
       return (
         <div>
           {currentQuestion.hasHeader && (
@@ -38,7 +37,6 @@ export default function Question() {
         </div>
       );
     } else {
-      console.log("outside");
       return (
         <div>
           {currentQuestion.hasHeader && (
