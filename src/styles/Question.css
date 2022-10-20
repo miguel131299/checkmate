@@ -123,6 +123,10 @@
   scale: 0.9;
 }
 
+.question--end-button {
+  width: 100%;
+}
+
 @media screen and (max-width: 992px) {
   .question-container {
     margin: 2em 0.5em;

@@ -15,6 +15,10 @@ function ContextProvider({ children }) {
     mediaConsumtion: 0,
     fakeNewsDetection: 1,
   });
+  const [lastQuestion, setLastQuestion] = useState(false);
+  const [showEndGameButton, setShowEndGameButton] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [inInterventionGroup, setInInterventionGroup] = useState(true);
 
   function handleRegistrationChange(event) {
     const { name, value } = event.target;
@@ -25,25 +29,39 @@ function ContextProvider({ children }) {
     }));
   }
 
-  function givePoints(value) {
-    // give points according to answer
-    const correctAnswer = currentQuestion.isFakeNews ? 0 : 4;
-    const difference = Math.abs(correctAnswer - sliderValue);
-    const multiplier = 4 - difference;
-
-    setScore((prevScore) => prevScore + 125 * multiplier);
-  }
-
   function goToNextQuestion() {
     // Set currentQuestion to next question
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    setCurrentQuestionIndex((prevIndex) => {
+      const newIndex = prevIndex + 1;
 
-    setCurrentQuestion(data[currentQuestionIndex]);
+      if (newIndex === data.length - 1) {
+        setLastQuestion(true);
+      }
+
+      setCurrentQuestion(data[newIndex]);
+
+      return newIndex;
+    });
   }
 
-  function buttonClick(value) {
-    givePoints(value);
-    goToNextQuestion();
+  function buttonClick() {
+    if (inInterventionGroup) {
+      if (showFeedback) {
+        setShowFeedback(false);
+        goToNextQuestion();
+      } else {
+        setShowFeedback(true);
+        if (lastQuestion) {
+          setShowEndGameButton(true);
+        }
+      }
+    } else {
+      if (!lastQuestion) {
+        goToNextQuestion();
+      } else {
+        setShowEndGameButton(true);
+      }
+    }
   }
 
   function changeSliderValue(event, value) {
@@ -56,6 +74,9 @@ function ContextProvider({ children }) {
         currentQuestion,
         score,
         user,
+        showEndGameButton,
+        showFeedback,
+        inInterventionGroup,
         changeSliderValue,
         buttonClick,
         handleRegistrationChange,

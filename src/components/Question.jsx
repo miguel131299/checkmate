@@ -2,10 +2,62 @@ import { Context } from "../Context";
 import { useContext } from "react";
 import "../styles/Question.css";
 import DiscreteSliderMarks from "./DiscreteSliderMarks";
+import { Link } from "react-router-dom";
 
 export default function Question() {
-  const { currentQuestion, changeSliderValue, buttonClick } =
-    useContext(Context);
+  const {
+    currentQuestion,
+    changeSliderValue,
+    buttonClick,
+    lastQuestion,
+    inInterventionGroup,
+    showFeedback,
+    showEndGameButton,
+  } = useContext(Context);
+
+  console.log(currentQuestion);
+
+  function showPictures() {
+    if (inInterventionGroup && showFeedback) {
+      console.log("inside");
+      return (
+        <div>
+          {currentQuestion.hasHeader && (
+            <img
+              src={`./images/feedback/${currentQuestion.id} - header.jpg`}
+              className="question--header-img"
+            ></img>
+          )}
+
+          {currentQuestion.hasText && (
+            <img
+              src={`./images/feedback/${currentQuestion.id} - text.jpg`}
+              className="question--text-img"
+            ></img>
+          )}
+        </div>
+      );
+    } else {
+      console.log("outside");
+      return (
+        <div>
+          {currentQuestion.hasHeader && (
+            <img
+              src={`./images/articles/${currentQuestion.id} - header.jpg`}
+              className="question--header-img"
+            ></img>
+          )}
+
+          {currentQuestion.hasText && (
+            <img
+              src={`./images/articles/${currentQuestion.id} - text.jpg`}
+              className="question--text-img"
+            ></img>
+          )}
+        </div>
+      );
+    }
+  }
 
   return (
     <div className="question-container">
@@ -25,18 +77,7 @@ export default function Question() {
             </div>
           </div>
           <p className="question--content-text">{currentQuestion.content}</p> */}
-          {currentQuestion.hasHeader && (
-            <img
-              src={`./images/articles/${currentQuestion.id} - header.jpg`}
-              className="question--header-img"
-            ></img>
-          )}
-          {currentQuestion.hasText && (
-            <img
-              src={`./images/articles/${currentQuestion.id} - text.jpg`}
-              className="question--text-img"
-            ></img>
-          )}
+          {showPictures()}
         </div>
       </div>
       <div className="question--answer-container">
@@ -47,12 +88,18 @@ export default function Question() {
           className="question--answer-slider"
           sliderChange={changeSliderValue}
         />
-        <button
-          className="question--answer-button"
-          onClick={() => buttonClick(5)}
-        >
-          Nächste Frage
-        </button>
+        {showEndGameButton && (
+          <Link to="/end">
+            <button className="question--end-button question--answer-button">
+              Beenden
+            </button>
+          </Link>
+        )}
+        {!showEndGameButton && (
+          <button className="question--answer-button" onClick={buttonClick}>
+            {showFeedback ? "Nächste Frage" : "Beantworten"}
+          </button>
+        )}
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ function Registration() {
         </div>
 
         <div className="registration--form-container">
-          <h2 className="registration--form-title">Who are you?</h2>
+          <h2 className="registration--form-title">Wer sind Sie?</h2>
           <form className="form">
             <div className="registration--field-container">
               <label htmlFor="">

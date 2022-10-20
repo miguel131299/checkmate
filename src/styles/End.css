@@ -1,0 +1,144 @@
+.end--content {
+  min-height: 80vh;
+}
+
+@media screen and (min-width: 992px) {
+  .end-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+  }
+}
+
+/* HEADER */
+
+.end--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end--logo {
+  width: 90%;
+}
+
+.end--logo-slogan {
+  font-family: "Questrial", sans-serif;
+  position: relative;
+  bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .end--header {
+    position: relative;
+  }
+
+  .end--logo {
+    width: 50%;
+  }
+
+  .end--logo-slogan {
+    font-size: 1.2rem;
+  }
+}
+
+/* CONTENT */
+
+.end--content-container {
+  padding: 2em 3em;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.end--content-title {
+  margin-bottom: 1em;
+}
+
+.end--content-text {
+  margin-bottom: 3em;
+}
+
+.end--content-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end--content-button {
+  width: 60%;
+  background-color: var(--darker-green);
+  color: var(--white);
+  padding: 1em;
+  border: none;
+  border-radius: 0.8em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.end--content-button:hover {
+  background-color: var(--dark-green);
+}
+
+@media screen and (min-width: 992px) {
+  .end--content-container {
+    padding: 2em 10em;
+  }
+
+  .end--content-title {
+    font-size: 2rem;
+  }
+
+  .end--content-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* IMAGE */
+
+.end--image-container {
+  background-color: var(--lighter-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.end--image-container > img {
+  width: 100%;
+}
+
+.end--confetti-image {
+  position: absolute;
+  z-index: -1;
+}
+
+.end--kneeling-image {
+  scale: 0.5;
+}
+
+@media screen and (min-width: 992px) {
+  .end--image-container {
+    height: 100%;
+  }
+
+  .end--image-container > img {
+    width: 35%;
+  }
+
+  .end--kneeling-image {
+    scale: 0.8;
+  }
+}
