@@ -1,7 +1,11 @@
 import "../styles/End.css";
 import { Link } from "react-router-dom";
+import { Context } from "../Context";
+import { useContext } from "react";
 
 export default function End() {
+  const { resetGame } = useContext(Context);
+
   return (
     <div className="end-container">
       <div className="end--content">
@@ -24,7 +28,11 @@ export default function End() {
           <h2 className="end--content-title">Glückwunsch!</h2>
           <p className="end--content-text">Sie haben alle Fragen beantwortet</p>
           <div className="end--content-button-container">
-            <button className="end--content-button">Nochmal versuchen</button>
+            <Link to="/game">
+              <button className="end--content-button" onClick={resetGame}>
+                Nochmal versuchen
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -6,7 +6,6 @@ const Context = React.createContext();
 function ContextProvider({ children }) {
   const [currentQuestion, setCurrentQuestion] = useState(data[0]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
   const [sliderValue, setSliderValue] = useState(2);
   const [user, setUser] = useState({
     id: -99,
@@ -68,15 +67,23 @@ function ContextProvider({ children }) {
     setSliderValue(value);
   }
 
+  function resetGame() {
+    setCurrentQuestion(data[0]);
+    setCurrentQuestionIndex(0);
+    setLastQuestion(false);
+    setShowEndGameButton(false);
+    setShowFeedback(false);
+  }
+
   return (
     <Context.Provider
       value={{
         currentQuestion,
-        score,
         user,
         showEndGameButton,
         showFeedback,
         inInterventionGroup,
+        resetGame,
         changeSliderValue,
         buttonClick,
         handleRegistrationChange,

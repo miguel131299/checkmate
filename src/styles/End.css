@@ -75,7 +75,7 @@
 }
 
 .end--content-button {
-  width: 60%;
+  width: 100%;
   background-color: var(--darker-green);
   color: var(--white);
   padding: 1em;
