@@ -15,30 +15,22 @@ function LandingPage() {
               />
             </div>
           </Link>
-          <p className="lp--logo-slogan">A project of TUM: Junge Akademie</p>
-        </div>
-
-        <div className="lp--sign-buttons-container">
-          <Link to="/register">
-            <button className="lp--button lp--sign-in-button">Sign In</button>
-          </Link>
-          <Link to="/register">
-            <button className="lp--button lp--sign-up-button">Sign Up</button>
-          </Link>
+          <p className="lp--logo-slogan">Ein Projekt der TUM: Junge Akademie</p>
         </div>
       </header>
 
       <div className="lp--main-container">
         <div className="lp--main-text">
           <h2 className="lp--main-title">
-            Improve your skills to identify Fake News, wherever you are
+            Verbessern Sie Ihre Fähigkeiten, Fake News zu erkennen, wo immer Sie
+            sind
           </h2>
           <p className="lp--main-description">
-            Test your knowledge with our "fake" news and compete with your
-            friends
+            Testen Sie Ihr Wissen mit unseren "gefälschten" Nachrichten und
+            messen Sie sich mit Ihren Freunden
           </p>
           <Link to="/register">
-            <button className="lp--main-button">Let's get started!</button>
+            <button className="lp--main-button">Loslegen!</button>
           </Link>
         </div>
         <div className="lp--main-img-container">
@@ -51,21 +43,20 @@ function LandingPage() {
       </div>
 
       <div className="lp--trivia-container">
-        <h2 className="lp--trivia-question">Did you know?</h2>
+        <h2 className="lp--trivia-question">Wussten Sie?</h2>
 
         <div className="lp--facts-container">
           <div className="lp--fact-container">
-            <h3 className="lp--fact-title">45%</h3>
+            <h3 className="lp--fact-title">33%</h3>
             <p className="lp--fact-description">
-              News consumers believed that they encounter fake news on a daily
-              basis
+              aller Inhalte im Internet sind Fake News oder Hassreden
             </p>
           </div>
 
           <div className="lp--fact-container">
-            <h3 className="lp--fact-title">74%</h3>
+            <h3 className="lp--fact-title">9,6 Millionen</h3>
             <p className="lp--fact-description">
-              News consumers worried about the spread of fake news
+              Die Zahl der von Facebook entfernten Hassreden im Jahr 2020
             </p>
           </div>
 

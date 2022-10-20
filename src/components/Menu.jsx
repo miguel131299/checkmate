@@ -9,7 +9,7 @@ export default function Menu() {
   return (
     <div className="menu-container">
       <div className="menu--info-container">
-        <div className="menu--user-greeting menu--section">
+        {/* <div className="menu--user-greeting menu--section">
           <img
             src="./images/user-icon.png"
             alt=""
@@ -25,7 +25,7 @@ export default function Menu() {
             Level:{" "}
             <span className="bold score">{currentQuestion.difficulty}</span>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="menu--logo-container">
         <Link to="/">
@@ -35,7 +35,7 @@ export default function Menu() {
             alt="Checkmate Logo"
           />
         </Link>
-        <p className="menu--logo-slogan">A project of TUM: Junge Akademie</p>
+        <p className="menu--logo-slogan">Ein Projekt der TUM: Junge Akademie</p>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ function Registration() {
             </div>
           </Link>
           <p className="registration--logo-slogan">
-            A project of TUM: Junge Akademie
+            Ein Projekt der TUM: Junge Akademie
           </p>
         </div>
 
@@ -29,7 +29,7 @@ function Registration() {
           <form className="form">
             <div className="registration--field-container">
               <label htmlFor="">
-                Age: <br />
+                Alter: <br />
                 <input
                   type="number"
                   placeholder="18"
@@ -42,7 +42,7 @@ function Registration() {
 
             <div className="registration--field-container">
               <label htmlFor="">
-                Gender: <br />
+                Geschlecht: <br />
                 <input
                   type="radio"
                   name="gender"
@@ -50,7 +50,7 @@ function Registration() {
                   checked={user.gender === "male"}
                   onChange={handleRegistrationChange}
                 />
-                <label htmlFor="">Male</label>
+                <label htmlFor="">Männlich</label>
                 <br />
                 <input
                   type="radio"
@@ -59,7 +59,7 @@ function Registration() {
                   checked={user.gender === "female"}
                   onChange={handleRegistrationChange}
                 />
-                <label htmlFor="">Female</label>
+                <label htmlFor="">Weiblich</label>
                 <br />
                 <input
                   type="radio"
@@ -68,7 +68,7 @@ function Registration() {
                   checked={user.gender === "diverse"}
                   onChange={handleRegistrationChange}
                 />
-                <label htmlFor="">Diverse</label>
+                <label htmlFor="">Divers</label>
                 <br />
                 <input
                   type="radio"
@@ -77,14 +77,14 @@ function Registration() {
                   checked={user.gender === "noAnswer"}
                   onChange={handleRegistrationChange}
                 />
-                <label htmlFor="">No Answer</label>
+                <label htmlFor="">Keine Angabe</label>
                 <br />
               </label>
             </div>
 
             <div className="registration--field-container">
               <label htmlFor="media-consumption">
-                How much media do you consume in a week? <br />
+                Wie viele Stunden pro Woche konsumieren Sie Medien? <br />
                 <input
                   type="number"
                   placeholder="3"
@@ -97,8 +97,8 @@ function Registration() {
 
             <div className="registration--field-container">
               <label htmlFor="self-assessment">
-                In your opinion, how well can you detect fake news? (from 1 to
-                5) <br />
+                Wie gut können Sie Ihrer Meinung nach Fake News erkennen? (von 1
+                bis 5) <br />
                 <input
                   type="range"
                   min={1}
@@ -122,7 +122,7 @@ function Registration() {
               <div className="submit-container">
                 <input
                   type="submit"
-                  value={"Continue"}
+                  value={"Weiter"}
                   className="registration--submit-button"
                 />
               </div>

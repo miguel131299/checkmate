@@ -12,7 +12,7 @@ const marks = [
   // },
   {
     value: 2,
-    label: "Can't Tell",
+    label: "Kann es nicht sagen",
   },
   // {
   //   value: 3,
@@ -20,7 +20,7 @@ const marks = [
   // },
   {
     value: 4,
-    label: "Real",
+    label: "Echt",
   },
 ];
 

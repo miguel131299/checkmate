@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   width: 100%;
   position: relative;
   bottom: 1.5em;
@@ -17,11 +18,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   width: 100%;
 }
 
 .lp--logo {
-  width: 80%;
+  width: 100%;
 }
 
 .lp--logo-slogan {
@@ -62,9 +64,16 @@
 }
 
 @media screen and (min-width: 992px) {
+  .lp-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .lp--header {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     position: static;
     padding: 0;
   }
@@ -73,6 +82,7 @@
     flex-direction: row;
     align-items: center;
     width: 60%;
+    margin-left: 4.5em;
   }
 
   .logo-container {
@@ -82,7 +92,7 @@
   }
 
   .lp--logo {
-    width: 75%;
+    width: 100%;
     max-width: 325px;
     object-fit: cover;
   }
@@ -91,6 +101,7 @@
     position: relative;
     top: 5px;
     width: fit-content;
+    font-size: 1.2rem;
   }
 
   .lp--sign-buttons-container {
@@ -172,11 +183,12 @@
   .lp--main-description {
     margin-bottom: 2em;
     font-size: 1.3rem;
-    width: 100%;
+    width: 80%;
   }
 
   .lp--main-button {
     font-size: 1.5rem;
+    width: 150%;
   }
 
   .lp--main-img-container {

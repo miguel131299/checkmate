@@ -5,17 +5,16 @@ const Context = React.createContext();
 
 function ContextProvider({ children }) {
   const [currentQuestion, setCurrentQuestion] = useState(data[0]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [sliderValue, setSliderValue] = useState(2);
   const [user, setUser] = useState({
     id: -99,
-    age: -1,
+    age: 0,
     gender: "noAnswer",
-    mediaConsumtion: -1,
-    fakeNewsDetection: -1,
+    mediaConsumtion: 0,
+    fakeNewsDetection: 1,
   });
-
-  console.log(user);
 
   function handleRegistrationChange(event) {
     const { name, value } = event.target;
@@ -37,11 +36,9 @@ function ContextProvider({ children }) {
 
   function goToNextQuestion() {
     // Set currentQuestion to next question
-    let nextQuestion = data.find((elem) => elem.id === currentQuestion.id + 1);
-    if (typeof nextQuestion === "undefined") {
-      nextQuestion = data[0];
-    }
-    setCurrentQuestion(nextQuestion);
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+
+    setCurrentQuestion(data[currentQuestionIndex]);
   }
 
   function buttonClick(value) {

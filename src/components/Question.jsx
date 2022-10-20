@@ -11,7 +11,7 @@ export default function Question() {
     <div className="question-container">
       <div className="question--content-container">
         <div className="question--content">
-          <div className="question--header-container">
+          {/* <div className="question--header-container">
             <img
               className="question--header-image"
               src="./images/newspaper.png"
@@ -24,12 +24,24 @@ export default function Question() {
               </p>
             </div>
           </div>
-          <p className="question--content-text">{currentQuestion.content}</p>
+          <p className="question--content-text">{currentQuestion.content}</p> */}
+          {currentQuestion.hasHeader && (
+            <img
+              src={`./images/articles/${currentQuestion.id} - header.jpg`}
+              className="question--header-img"
+            ></img>
+          )}
+          {currentQuestion.hasText && (
+            <img
+              src={`./images/articles/${currentQuestion.id} - text.jpg`}
+              className="question--text-img"
+            ></img>
+          )}
         </div>
       </div>
       <div className="question--answer-container">
         <h3 className="question--answer-question">
-          What do you think of this article?
+          Was halten Sie von diesem Artikel?
         </h3>
         <DiscreteSliderMarks
           className="question--answer-slider"
@@ -39,7 +51,7 @@ export default function Question() {
           className="question--answer-button"
           onClick={() => buttonClick(5)}
         >
-          Next Question
+          Nächste Frage
         </button>
       </div>
     </div>
