@@ -61,16 +61,17 @@ function LandingPage() {
           </div>
 
           <div className="lp--fact-container">
-            <h3 className="lp--fact-title">Social Media</h3>
+            <h3 className="lp--fact-title">2017</h3>
             <p className="lp--fact-description">
-              Most likely platform to ecounter fake news
+              Seitdem steht der Begriff "Fake News" im Duden
             </p>
           </div>
 
           <div className="lp--fact-container">
-            <h3 className="lp--fact-title">10%</h3>
+            <h3 className="lp--fact-title">76%</h3>
             <p className="lp--fact-description">
-              News consumers admitted to sharing fake news
+              waren während der Corona-Pandemie regelmäßig mit Fake News
+              konfrontiert
             </p>
           </div>
         </div>
