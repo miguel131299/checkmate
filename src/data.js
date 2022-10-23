@@ -30,11 +30,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Bekannte Nachrichtenquelle",
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
         color: "#D9181C",
       },
       {
-        text: "Direktes, prüfbares Zitat einer zuverlässlichen Quelle",
+        text: "Argumente aus persönlicher Autoritätsposition",
         color: "#E40EE6",
       },
     ],
