@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { Context } from "../Context";
 
 function Registration() {
-  const { user, handleRegistrationChange } = useContext(Context);
+  const { user, handleRegistrationChange, registerUser } = useContext(Context);
 
   return (
     <div className="registration-container">
@@ -25,7 +25,7 @@ function Registration() {
         </div>
 
         <div className="registration--form-container">
-          <h2 className="registration--form-title">Wer sind Sie?</h2>
+          <h2 className="registration--form-title">Stell dich uns vor!</h2>
           <form className="form">
             <div className="registration--field-container">
               <label htmlFor="">
@@ -39,7 +39,6 @@ function Registration() {
                 />
               </label>
             </div>
-
             <div className="registration--field-container">
               <label htmlFor="">
                 Geschlecht: <br />
@@ -81,23 +80,22 @@ function Registration() {
                 <br />
               </label>
             </div>
-
             <div className="registration--field-container">
               <label htmlFor="media-consumption">
-                Wie viele Stunden pro Woche konsumieren Sie Medien? <br />
+                Wie viele Stunden pro Tag konsumierst du Medien? <br />
                 <input
                   type="number"
                   placeholder="3"
                   onChange={handleRegistrationChange}
-                  name="mediaConsumtion"
-                  value={user.mediaConsumtion}
+                  name="mediaConsumption"
+                  value={user.mediaConsumption}
                 />
               </label>
             </div>
-
+            we
             <div className="registration--field-container">
               <label htmlFor="self-assessment">
-                Wie gut können Sie Ihrer Meinung nach Fake News erkennen? (von 1
+                Wie gut kannst du deiner Meinung nach Fake News erkennen? (von 1
                 bis 5) <br />
                 <input
                   type="range"
@@ -117,13 +115,13 @@ function Registration() {
                 </datalist>
               </label>
             </div>
-
             <Link to="/game" style={{ textDecoration: "none" }}>
               <div className="submit-container">
                 <input
                   type="submit"
                   value={"Weiter"}
                   className="registration--submit-button"
+                  onClick={registerUser}
                 />
               </div>
             </Link>

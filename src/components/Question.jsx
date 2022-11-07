@@ -15,8 +15,6 @@ export default function Question() {
     showEndGameButton,
   } = useContext(Context);
 
-  console.log(currentQuestion);
-
   function showPictures() {
     if (inInterventionGroup && showFeedback) {
       return (
@@ -80,7 +78,7 @@ export default function Question() {
       </div>
       <div className="question--answer-container">
         <h3 className="question--answer-question">
-          Was halten Sie von diesem Artikel?
+          Wie schätzt du den Artikel ein?
         </h3>
         <DiscreteSliderMarks
           className="question--answer-slider"

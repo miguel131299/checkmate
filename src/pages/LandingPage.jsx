@@ -22,12 +22,12 @@ function LandingPage() {
       <div className="lp--main-container">
         <div className="lp--main-text">
           <h2 className="lp--main-title">
-            Verbessern Sie Ihre Fähigkeiten, Fake News zu erkennen, wo immer Sie
-            sind
+            Verbessere deine Fähigkeiten, Fake News zu erkennen, wo immer du
+            bist
           </h2>
           <p className="lp--main-description">
-            Testen Sie Ihr Wissen mit unseren "gefälschten" Nachrichten und
-            messen Sie sich mit Ihren Freunden
+            Teste dein Wissen mit unseren "gefälschten" Nachrichten und messe
+            dich mit deinen Freunden
           </p>
           <Link to="/register">
             <button className="lp--main-button">Loslegen!</button>
@@ -43,7 +43,7 @@ function LandingPage() {
       </div>
 
       <div className="lp--trivia-container">
-        <h2 className="lp--trivia-question">Wussten Sie?</h2>
+        <h2 className="lp--trivia-question">Wusstest du?</h2>
 
         <div className="lp--facts-container">
           <div className="lp--fact-container">
