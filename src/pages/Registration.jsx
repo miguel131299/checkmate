@@ -92,7 +92,6 @@ function Registration() {
                 />
               </label>
             </div>
-            we
             <div className="registration--field-container">
               <label htmlFor="self-assessment">
                 Wie gut kannst du deiner Meinung nach Fake News erkennen? (von 1
