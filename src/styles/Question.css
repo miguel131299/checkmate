@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   overflow: scroll;
+  overflow-x: hidden;
   padding: 2em;
 }
 
@@ -20,6 +21,27 @@
 .question--header-img,
 .question--text-img {
   width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--light-green);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-green);
 }
 
 .question--answer-container {
