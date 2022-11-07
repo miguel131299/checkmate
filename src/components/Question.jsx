@@ -9,7 +9,6 @@ export default function Question() {
     currentQuestion,
     changeSliderValue,
     buttonClick,
-    lastQuestion,
     inInterventionGroup,
     showFeedback,
     showEndGameButton,
@@ -36,7 +35,7 @@ export default function Question() {
       );
     } else {
       return (
-        <div>
+        <div className="question--content">
           {currentQuestion.hasHeader && (
             <img
               src={`./images/articles/${currentQuestion.id} - header.jpg`}
@@ -58,8 +57,7 @@ export default function Question() {
   return (
     <div className="question-container">
       <div className="question--content-container">
-        <div className="question--content">
-          {/* <div className="question--header-container">
+        {/* <div className="question--header-container">
             <img
               className="question--header-image"
               src="./images/newspaper.png"
@@ -73,8 +71,7 @@ export default function Question() {
             </div>
           </div>
           <p className="question--content-text">{currentQuestion.content}</p> */}
-          {showPictures()}
-        </div>
+        {showPictures()}
       </div>
       <div className="question--answer-container">
         <h3 className="question--answer-question">
