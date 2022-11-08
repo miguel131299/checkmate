@@ -1,31 +1,7 @@
 export default [
-  // {
-  //   id: 18,
-  //   isFakeNews: true,
-  //   hasHeader: false,
-  //   hasText: true,
-  // },
-  // {
-  //   id: 16,
-  //   isFakeNews: true,
-  //   hasHeader: false,
-  //   hasText: true,
-  // },
-  // {
-  //   id: 15,
-  //   isFakeNews: true,
-  //   hasHeader: true,
-  //   hasText: true,
-  // },
-  // {
-  //   id: 14,
-  //   isFakeNews: true,
-  //   hasHeader: true,
-  //   hasText: true,
-  // },
   {
-    id: 13,
-    isFakeNews: true,
+    id: 5,
+    isFakeNews: false,
     hasHeader: true,
     hasText: true,
     feedback: [
@@ -33,38 +9,307 @@ export default [
         text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
         color: "#D9181C",
       },
-      {
-        text: "Argumente aus persönlicher Autoritätsposition",
-        color: "#E40EE6",
-      },
     ],
   },
-  // {
-  //   id: 4,
-  //   isFakeNews: false,
-  //   hasHeader: true,
-  //   hasText: true,
-  // },
   {
-    id: 3,
+    id: 6,
     isFakeNews: false,
     hasHeader: true,
     hasText: true,
     feedback: [
       {
-        text: "Bekannte Nachrichtenquelle",
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
         color: "#D9181C",
-      },
-      {
-        text: "Direktes, prüfbares Zitat einer zuverlässlichen Quelle",
-        color: "#E40EE6",
       },
     ],
   },
-  // {
-  //   id: 2,
-  //   isFakeNews: false,
-  //   hasHeader: true,
-  //   hasText: true,
-  // },
+  {
+    id: 7,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 8,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+
+  {
+    id: 10,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 11,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 12,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 14,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 16,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 17,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 19,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 21,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 23,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 25,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 26,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 27,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 28,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 113,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 114,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 121,
+    isFakeNews: false,
+    hasHeader: false,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 123,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 136,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 138,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 143,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 147,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
+  {
+    id: 149,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Aufbauschen einer Verschwörungstheorie mit Aufruf zur Beunruhigung",
+        color: "#D9181C",
+      },
+    ],
+  },
 ];
