@@ -12,6 +12,8 @@ export default function Question() {
     inInterventionGroup,
     showFeedback,
     showEndGameButton,
+    getNumberOfQuestions,
+    currentQuestionIndex,
   } = useContext(Context);
 
   function showPictures() {
@@ -56,6 +58,9 @@ export default function Question() {
 
   return (
     <div className="question-container">
+      <div className="question-counter">
+        Artikel #{currentQuestionIndex + 1}/{getNumberOfQuestions()}
+      </div>
       <div className="question--content-container">
         {/* <div className="question--header-container">
             <img
