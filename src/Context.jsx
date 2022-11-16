@@ -38,6 +38,7 @@ function ContextProvider({ children }) {
   const [showEndGameButton, setShowEndGameButton] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   const [inInterventionGroup, setInInterventionGroup] = useState(true);
+  const [sessionID, setSessionID] = useState("NO_SESSION");
 
   function handleRegistrationChange(event) {
     const { name, value } = event.target;
@@ -98,48 +99,52 @@ function ContextProvider({ children }) {
   }
 
   function registerUser() {
-    // TODO: fetch session id
+    fetch("http://api.checkmate.lucas-schnack.de/session")
+      .then((response) => response.json(response))
+      .then((data) => {
+        let session = data["session_id"];
+        setSessionID(session);
 
-    const params = {
-      session_id: "TEST",
-      age: 7,
-      gender: "male",
-      media_consumption: "moderate",
-      fake_news_detection_ability: "great",
-    };
+        const params = {
+          session_id: session,
+          age: user.age,
+          gender: user.gender,
+          media_consumption: user.mediaConsumption,
+          fake_news_detection_ability: user.fakeNewsDetection,
+        };
 
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(params),
-    };
+        const options = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(params),
+        };
 
-    // fetch("http://api.checkmate.lucas-schnack.de/register", options)
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log("Success:", data);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error:", error);
-    //   });
+        fetch("http://api.checkmate.lucas-schnack.de/register", options)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
 
-    // fetch("http://api.checkmate.lucas-schnack.de/status")
-    //   .then((response) => response.json())
-    //   .then((data) => console.log(data));
+            // set User ID
+            setUser((prevUser) => {
+              return { ...prevUser, id: data.id };
+            });
 
-    console.log(options);
+            setInInterventionGroup(data.treatment);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      });
   }
 
   function submitAnswer() {
     const params = {
-      session_id: 1,
-      participant: 2,
+      session_id: sessionID,
+      participant: user.id,
       question: currentQuestion.id,
       choice: sliderValue,
-      // media_consumption: user.mediaConsumption,
-      // fake_news_detection_ability: user.fakeNewsDetection,
     };
 
     const options = {
@@ -150,16 +155,14 @@ function ContextProvider({ children }) {
       },
     };
 
-    // fetch("http://api.checkmate.lucas-schnack.de/submit", options)
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log("Success:", data);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error:", error);
-    //   });
-
-    console.log(options);
+    fetch("http://api.checkmate.lucas-schnack.de/submit", options)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
 
   function getNumberOfQuestions() {
