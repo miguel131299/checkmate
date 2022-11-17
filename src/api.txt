@@ -1,0 +1,8 @@
+api.checkmate.schnack.dev
+
+GET /status : Infos
+GET /status/<session_id> : Infos zu einer Session
+POST /start/<session_id> : startet eine neue Session
+GET /session :Get id of current session
+POST /register : Parameter (session_id (string), age (int), gender (boolean)) registriert einen neuen Teilnehmer und gibt ID + Treatment zurück
+POST /submit : Parameter (participant (int), session_id (int), question (int), choice (int)) Gibt die Antwort für eine Frage ab

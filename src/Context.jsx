@@ -99,7 +99,7 @@ function ContextProvider({ children }) {
   }
 
   function registerUser() {
-    fetch("http://api.checkmate.lucas-schnack.de/session")
+    fetch("https://api.checkmate.schnack.dev/session")
       .then((response) => response.json(response))
       .then((data) => {
         let session = data["session_id"];
@@ -121,7 +121,7 @@ function ContextProvider({ children }) {
           body: JSON.stringify(params),
         };
 
-        fetch("http://api.checkmate.lucas-schnack.de/register", options)
+        fetch("https://api.checkmate.schnack.dev/register", options)
           .then((response) => response.json())
           .then((data) => {
             console.log("Success:", data);
@@ -155,7 +155,7 @@ function ContextProvider({ children }) {
       },
     };
 
-    fetch("http://api.checkmate.lucas-schnack.de/submit", options)
+    fetch("https://api.checkmate.schnack.dev/submit", options)
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
