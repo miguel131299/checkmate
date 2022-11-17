@@ -1,20 +1,20 @@
 export default [
-  {
-    id: 14,
-    isFakeNews: false,
-    hasHeader: true,
-    hasText: true,
-    feedback: [
-      {
-        text: "Anmerkung 1: trotz Rechtschreibfehler ist dies ein rechter Artikel → nachträgliche Recherche notwendig",
-        color: "#4CA4E8",
-      },
-      {
-        text: "Anmerkung 2: Kreisverwaltungsreferat kontrolliert seit Jahren u.a. die Biermenge in den Krügen des Oktoberfestes",
-        color: "#6AA84F",
-      },
-    ],
-  },
+  // {
+  //   id: 14,
+  //   isFakeNews: false,
+  //   hasHeader: true,
+  //   hasText: true,
+  //   feedback: [
+  //     {
+  //       text: "Anmerkung 1: trotz Rechtschreibfehler ist dies ein rechter Artikel → nachträgliche Recherche notwendig",
+  //       color: "#4CA4E8",
+  //     },
+  //     {
+  //       text: "Anmerkung 2: Kreisverwaltungsreferat kontrolliert seit Jahren u.a. die Biermenge in den Krügen des Oktoberfestes",
+  //       color: "#6AA84F",
+  //     },
+  //   ],
+  // },
   {
     id: 21,
     isFakeNews: false,
@@ -319,13 +319,13 @@ export default [
       },
     ],
   },
-  {
-    id: 11,
-    isFakeNews: false,
-    hasHeader: false,
-    hasText: true,
-    feedback: [],
-  },
+  // {
+  //   id: 11,
+  //   isFakeNews: false,
+  //   hasHeader: false,
+  //   hasText: true,
+  //   feedback: [],
+  // },
   {
     id: 27,
     isFakeNews: false,
