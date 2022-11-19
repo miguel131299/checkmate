@@ -8,6 +8,13 @@
   padding: 2em;
 }
 
+.blue-blob {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -9999;
+}
+
 .question-counter {
   color: gray;
   margin-bottom: 1em;
