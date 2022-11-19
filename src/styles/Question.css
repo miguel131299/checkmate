@@ -97,14 +97,18 @@
 
 @media screen and (max-width: 992px) {
   .question-container {
-    margin: 2em 0.5em;
-    height: 70vh;
-    margin-top: 3em;
+    height: 90vh;
+    padding: 0;
+  }
+
+  .question-counter {
+    font-size: 1rem;
   }
 
   .question--content-container {
-    height: 60%;
     padding: 1em;
+    width: 90%;
+    height: auto;
   }
 
   .question--content {
@@ -136,7 +140,7 @@
   }
 
   .question--answer-button {
-    width: 50%;
+    width: 60%;
     margin-top: 1em;
     line-height: 1.4rem;
   }
