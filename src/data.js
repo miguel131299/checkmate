@@ -110,7 +110,7 @@ export default [
   {
     id: 147,
     isFakeNews: true,
-    hasHeader: true,
+    hasHeader: false,
     hasText: true,
     feedback: [
       {
