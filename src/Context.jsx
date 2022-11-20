@@ -182,6 +182,7 @@ function ContextProvider({ children }) {
         showFeedback,
         inInterventionGroup,
         currentQuestionIndex,
+        fakeNewsDetection,
         handleStarsValueChange,
         resetGame,
         changeSliderValue,

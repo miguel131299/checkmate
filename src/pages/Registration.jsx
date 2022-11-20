@@ -11,6 +11,7 @@ function Registration() {
     handleRegistrationChange,
     registerUser,
     handleStarsValueChange,
+    fakeNewsDetection,
   } = useContext(Context);
 
   const StyledRating = styled(Rating)({
@@ -115,7 +116,7 @@ function Registration() {
                 <div className="registration--stars-container">
                   <StyledRating
                     name="size-large"
-                    defaultValue={0}
+                    value={fakeNewsDetection}
                     size="large"
                     sx={{
                       fontSize: "2.5rem",
