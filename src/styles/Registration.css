@@ -205,6 +205,13 @@ input[type="range"]:focus::-ms-fill-upper {
   align-items: center;
 }
 
+.registration--stars-container {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  color: var(--light-gray);
+}
+
 .registration--submit-button {
   width: 50%;
   margin: 0 auto;
