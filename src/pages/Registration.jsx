@@ -82,7 +82,7 @@ function Registration() {
             </div>
             <div className="registration--field-container">
               <label htmlFor="media-consumption">
-                Wie viele Stunden pro Tag konsumierst du Medien? <br />
+                Wie viele Stunden pro Woche konsumierst du Medien? <br />
                 <input
                   type="number"
                   placeholder="3"
