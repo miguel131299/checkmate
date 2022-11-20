@@ -6,11 +6,11 @@ export default [
   //   hasText: true,
   //   feedback: [
   //     {
-  //       text: "Anmerkung 1: trotz Rechtschreibfehler ist dies ein rechter Artikel → nachträgliche Recherche notwendig",
+  //       text: "Trotz Rechtschreibfehler ist dies ein rechter Artikel → nachträgliche Recherche notwendig",
   //       color: "#4CA4E8",
   //     },
   //     {
-  //       text: "Anmerkung 2: Kreisverwaltungsreferat kontrolliert seit Jahren u.a. die Biermenge in den Krügen des Oktoberfestes",
+  //       text: "Kreisverwaltungsreferat kontrolliert seit Jahren u.a. die Biermenge in den Krügen des Oktoberfestes",
   //       color: "#6AA84F",
   //     },
   //   ],
@@ -22,11 +22,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: Quelle für Foto",
+        text: "Quelle für Foto",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: Die genannte Organisation kann man nach dem Lesen recherchieren",
+        text: "Die genannte Organisation kann man nach dem Lesen recherchieren",
         color: "#6AA84F",
       },
     ],
@@ -38,11 +38,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: Post sehr schwer erkennbar → eigene Recherche notwendig",
+        text: "Post sehr schwer erkennbar → eigene Recherche notwendig",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: Bekannter und seriöser Kanal auf Instagram mit Verifikation (blaues) Häkchen",
+        text: "Bekannter und seriöser Kanal auf Instagram mit Verifikation (blaues) Häkchen",
         color: "#6AA84F",
       },
     ],
@@ -70,7 +70,7 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: kritischer Text ohne dabei drohend, reißerisch oder provokant zu sein ",
+        text: "Kritischer Text ohne dabei drohend, reißerisch oder provokant zu sein ",
         color: "#D9181C",
       },
     ],
@@ -82,11 +82,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: bekannt für seriöse Nachrichten",
+        text: "Bekannt für seriöse Nachrichten",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: logisch aufgebaute Satzstruktur",
+        text: "Logisch aufgebaute Satzstruktur",
         color: "#6AA84F",
       },
     ],
@@ -98,11 +98,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: seriöse Zeitung",
+        text: "Seriöse Zeitung",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: konkrete, in sich logisch aufgezählte Fakten",
+        text: "Konkrete, in sich logisch aufgezählte Fakten",
         color: "#6AA84F",
       },
     ],
@@ -166,7 +166,7 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: Sachliche Sprache, im Konjunktiv geschrieben, keine reißerischen Anschuldigungen ",
+        text: "Sachliche Sprache, im Konjunktiv geschrieben, keine reißerischen Anschuldigungen ",
         color: "#4CA4E8",
       },
     ],
@@ -178,11 +178,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: seriöse Zeitung",
+        text: "Seriöse Zeitung",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: Autorin wird vorgestellt, welche ein Interview durchgeführt hat",
+        text: "Autorin wird vorgestellt, welche ein Interview durchgeführt hat",
         color: "#6AA84F",
       },
     ],
@@ -226,11 +226,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: Bild mit Quelle (dpa)",
+        text: "Bild mit Quelle (dpa)",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: sachliche und zusammenhängende Sätze",
+        text: "Sachliche und zusammenhängende Sätze",
         color: "#6AA84F",
       },
     ],
@@ -242,11 +242,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: bekannte und seriöse Nachrichtenquelle mit Instagram Kanal",
+        text: "Bekannte und seriöse Nachrichtenquelle mit Instagram Kanal",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: Sachliche Beschreibung der Lage, eine erweiterte Recherche ist hier trotzdem notwendig",
+        text: "Sachliche Beschreibung der Lage, eine erweiterte Recherche ist hier trotzdem notwendig",
         color: "#6AA84F",
       },
     ],
@@ -294,11 +294,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: Graph inklusive der Quelle ",
+        text: "Graph inklusive der Quelle ",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: Nachrichtenquelle bekannt und als seriös eingestuft ",
+        text: "Nachrichtenquelle bekannt und als seriös eingestuft ",
         color: "#6AA84F",
       },
     ],
@@ -310,11 +310,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: Autoren mit seriösem Arbeitgeber (SWR) benannt",
+        text: "Autoren mit seriösem Arbeitgeber (SWR) benannt",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: bekannte und seriöse Quelle",
+        text: "Bekannte und seriöse Quelle",
         color: "#6AA84F",
       },
     ],
@@ -333,11 +333,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: Quelle der Zahlen angegeben",
+        text: "Quelle der Zahlen angegeben",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: Post-Verantwortliche namentlich erwähnt",
+        text: "Post-Verantwortliche namentlich erwähnt",
         color: "#6AA84F",
       },
     ],
@@ -349,11 +349,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: konkrete Angaben zur Studie",
+        text: "Konkrete Angaben zur Studie",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: seriöser Instagram Kanal",
+        text: "Seriöser Instagram Kanal",
         color: "#6AA84F",
       },
     ],
@@ -365,11 +365,11 @@ export default [
     hasText: true,
     feedback: [
       {
-        text: "Anmerkung 1: sachlicher Titel, ohne z.B. Provokationen",
+        text: "Sachlicher Titel, ohne z.B. Provokationen",
         color: "#4CA4E8",
       },
       {
-        text: "Anmerkung 2: seriöser Schreibstil",
+        text: "Seriöser Schreibstil",
         color: "#6AA84F",
       },
     ],
