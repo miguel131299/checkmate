@@ -3,28 +3,55 @@ import Slider from "@mui/material/Slider";
 import { Context } from "../Context";
 import { useContext } from "react";
 
-const marks = [
-  {
-    value: 0,
-    label: "Fake",
-  },
-  // {
-  //   value: 1,
-  //   label: "Very Sceptical",
-  // },
-  {
-    value: 2,
-    label: "Kann es nicht sagen",
-  },
-  // {
-  //   value: 3,
-  //   label: "Pretty Trustworthy",
-  // },
-  {
-    value: 4,
-    label: "Echt",
-  },
-];
+function getMarks() {
+  if (getWidth() > 992) {
+    return [
+      {
+        value: 0,
+        label: "Fake",
+      },
+      {
+        value: 1,
+        label: "Eher Fake",
+      },
+      {
+        value: 2,
+        label: "Kann es nicht sagen",
+      },
+      {
+        value: 3,
+        label: "Eher Echt",
+      },
+      {
+        value: 4,
+        label: "Echt",
+      },
+    ];
+  } else {
+    return [
+      {
+        value: 0,
+        label: "Fake",
+      },
+      {
+        value: 1,
+        label: "",
+      },
+      {
+        value: 2,
+        label: "Kann es nicht sagen",
+      },
+      {
+        value: 3,
+        label: "",
+      },
+      {
+        value: 4,
+        label: "Echt",
+      },
+    ];
+  }
+}
 
 function getWidth() {
   const { innerWidth } = window;
@@ -44,7 +71,7 @@ export default function DiscreteSliderMarks(props) {
         key={currentQuestion.id}
         sx={{ color: "#90dea4" }}
         defaultValue={2}
-        marks={marks}
+        marks={getMarks()}
         min={0}
         max={4}
         onChangeCommitted={props.sliderChange}
