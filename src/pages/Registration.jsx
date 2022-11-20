@@ -2,9 +2,25 @@ import "../styles/Registration.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../Context";
+import { Rating } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 function Registration() {
-  const { user, handleRegistrationChange, registerUser } = useContext(Context);
+  const {
+    user,
+    handleRegistrationChange,
+    registerUser,
+    handleStarsValueChange,
+  } = useContext(Context);
+
+  const StyledRating = styled(Rating)({
+    "& .MuiRating-iconFilled": {
+      color: "#90DEA4",
+    },
+    "& .MuiRating-iconHover": {
+      color: "#4FE073",
+    },
+  });
 
   return (
     <div className="registration-container">
@@ -94,24 +110,22 @@ function Registration() {
             </div>
             <div className="registration--field-container">
               <label htmlFor="self-assessment">
-                Wie gut kannst du deiner Meinung nach Fake News erkennen? (von 1
-                bis 5) <br />
-                <input
-                  type="range"
-                  min={1}
-                  max={5}
-                  list="tickmarks"
-                  onChange={handleRegistrationChange}
-                  name="fakeNewsDetection"
-                  value={user.fakeNewsDetection}
-                />
-                <datalist id="tickmarks">
-                  <option value="1" label="1"></option>
-                  <option value="2" label="2"></option>
-                  <option value="3" label="3"></option>
-                  <option value="4" label="4"></option>
-                  <option value="5" label="5"></option>
-                </datalist>
+                Wie gut kannst du deiner Meinung nach Fake News erkennen?
+                <br />
+                <div className="registration--stars-container">
+                  <StyledRating
+                    name="size-large"
+                    defaultValue={0}
+                    size="large"
+                    sx={{
+                      fontSize: "2.5rem",
+                    }}
+                    className="registration--stars"
+                    onChange={(event, newValue) =>
+                      handleStarsValueChange(newValue)
+                    }
+                  />
+                </div>
               </label>
             </div>
             <Link to="/game" style={{ textDecoration: "none" }}>

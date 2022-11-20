@@ -32,13 +32,13 @@ function ContextProvider({ children }) {
     age: 0,
     gender: "noAnswer",
     mediaConsumption: 0,
-    fakeNewsDetection: 1,
   });
   const [lastQuestion, setLastQuestion] = useState(false);
   const [showEndGameButton, setShowEndGameButton] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   const [inInterventionGroup, setInInterventionGroup] = useState(true);
   const [sessionID, setSessionID] = useState("NO_SESSION");
+  const [fakeNewsDetection, setFakeNewsDetection] = useState(0);
 
   function handleRegistrationChange(event) {
     const { name, value } = event.target;
@@ -47,6 +47,10 @@ function ContextProvider({ children }) {
       ...prevUser,
       [name]: value,
     }));
+  }
+
+  function handleStarsValueChange(newValue) {
+    setFakeNewsDetection(newValue);
   }
 
   function goToNextQuestion() {
@@ -110,7 +114,7 @@ function ContextProvider({ children }) {
           age: user.age,
           gender: user.gender,
           media_consumption: user.mediaConsumption,
-          fake_news_detection_ability: user.fakeNewsDetection,
+          fake_news_detection_ability: fakeNewsDetection,
         };
 
         const options = {
@@ -178,6 +182,7 @@ function ContextProvider({ children }) {
         showFeedback,
         inInterventionGroup,
         currentQuestionIndex,
+        handleStarsValueChange,
         resetGame,
         changeSliderValue,
         buttonClick,

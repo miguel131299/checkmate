@@ -61,23 +61,7 @@ export default function Question() {
       <div className="question-counter">
         Artikel #{currentQuestionIndex + 1}/{getNumberOfQuestions()}
       </div>
-      <div className="question--content-container">
-        {/* <div className="question--header-container">
-            <img
-              className="question--header-image"
-              src="./images/newspaper.png"
-              alt=""
-            />
-            <div className="question--title-container">
-              <h2 className="question--title">{currentQuestion.title}</h2>
-              <p className="question--source">
-                Source: {currentQuestion.source}
-              </p>
-            </div>
-          </div>
-          <p className="question--content-text">{currentQuestion.content}</p> */}
-        {showPictures()}
-      </div>
+      <div className="question--content-container">{showPictures()}</div>
       <div className="question--answer-container">
         <h3 className="question--answer-question">
           Wie schätzt du den Artikel ein?
