@@ -214,7 +214,7 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .registration--submit-button {
   width: 50%;
-  margin: 0 auto;
+  margin: 1em auto;
   align-self: center;
   background-color: var(--darker-green);
   color: var(--white);
