@@ -64,7 +64,16 @@ export default function Question() {
     return (
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Box sx={{ width: "100%", mr: 1 }}>
-          <LinearProgress variant="determinate" {...props} />
+          <LinearProgress
+            variant="determinate"
+            {...props}
+            sx={{
+              backgroundColor: "#E9FDF5",
+              "& .MuiLinearProgress-bar1": {
+                backgroundColor: "#000000",
+              },
+            }}
+          />
         </Box>
         <Box sx={{ minWidth: 35 }}>
           <Typography variant="body2" color="text.secondary">{`${Math.round(
@@ -85,7 +94,7 @@ export default function Question() {
 
   return (
     <div className="question-container">
-      <Box sx={{ width: "90%", marginBottom: "2em", color: "green" }}>
+      <Box sx={{ width: "90%", marginBottom: "2em" }}>
         <LinearProgressWithLabel
           value={((currentQuestionIndex + 1) / getNumberOfQuestions()) * 100}
         />

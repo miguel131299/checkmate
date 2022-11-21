@@ -8,14 +8,6 @@
   padding: 2em;
 }
 
-.css-5xe99f-MuiLinearProgress-bar1 {
-  background-color: var(--dark-green) !important;
-}
-
-.css-eglki6-MuiLinearProgress-root {
-  background-color: var(--light-green) !important;
-}
-
 .question--content-container {
   background: var(--light-green);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
