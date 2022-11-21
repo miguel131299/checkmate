@@ -3,6 +3,10 @@ import { useContext } from "react";
 import "../styles/Question.css";
 import DiscreteSliderMarks from "./DiscreteSliderMarks";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import LinearProgress from "@mui/material/LinearProgress";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 export default function Question() {
   const {
@@ -56,11 +60,36 @@ export default function Question() {
     }
   }
 
+  function LinearProgressWithLabel(props) {
+    return (
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box sx={{ width: "100%", mr: 1 }}>
+          <LinearProgress variant="determinate" {...props} />
+        </Box>
+        <Box sx={{ minWidth: 35 }}>
+          <Typography variant="body2" color="text.secondary">{`${Math.round(
+            props.value
+          )}%`}</Typography>
+        </Box>
+      </Box>
+    );
+  }
+
+  LinearProgressWithLabel.propTypes = {
+    /**
+     * The value of the progress indicator for the determinate and buffer variants.
+     * Value between 0 and 100.
+     */
+    value: PropTypes.number.isRequired,
+  };
+
   return (
     <div className="question-container">
-      <div className="question-counter">
-        Artikel #{currentQuestionIndex + 1}/{getNumberOfQuestions()}
-      </div>
+      <Box sx={{ width: "90%", marginBottom: "2em", color: "green" }}>
+        <LinearProgressWithLabel
+          value={((currentQuestionIndex + 1) / getNumberOfQuestions()) * 100}
+        />
+      </Box>
       <div className="question--content-container">{showPictures()}</div>
       <div className="question--answer-container">
         <h3 className="question--answer-question">
