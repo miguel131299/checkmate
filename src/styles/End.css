@@ -53,7 +53,7 @@
 /* CONTENT */
 
 .end--content-container {
-  padding: 2em 3em;
+  padding: 2em 2em;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -65,9 +65,17 @@
 }
 
 .end--content-text {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 
+.end--table-container {
+  width: 100%;
+  max-height: 400px;
+}
+
+.MuiTableRow-head {
+  background-color: rebeccapurple;
+}
 .end--content-button-container {
   display: flex;
   justify-content: center;
@@ -86,6 +94,7 @@
   font-size: 1.2rem;
   transition: 0.2s;
   cursor: pointer;
+  margin-top: 2em;
 }
 
 .end--content-button:hover {

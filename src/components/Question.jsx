@@ -96,7 +96,7 @@ export default function Question() {
     <div className="question-container">
       <Box sx={{ width: "90%", marginBottom: "2em" }}>
         <LinearProgressWithLabel
-          value={((currentQuestionIndex + 1) / getNumberOfQuestions()) * 100}
+          value={(currentQuestionIndex / getNumberOfQuestions()) * 100}
         />
       </Box>
       <div className="question--content-container">{showPictures()}</div>

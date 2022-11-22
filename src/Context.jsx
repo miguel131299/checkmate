@@ -39,6 +39,7 @@ function ContextProvider({ children }) {
   const [inInterventionGroup, setInInterventionGroup] = useState(true);
   const [sessionID, setSessionID] = useState("NO_SESSION");
   const [fakeNewsDetection, setFakeNewsDetection] = useState(0);
+  const [tableData, setTableData] = useState(createTableData());
 
   function handleRegistrationChange(event) {
     const { name, value } = event.target;
@@ -69,7 +70,9 @@ function ContextProvider({ children }) {
   }
 
   function buttonClick() {
+    updateTable();
     submitAnswer();
+    setSliderValue(2);
 
     if (inInterventionGroup) {
       if (showFeedback) {
@@ -173,6 +176,52 @@ function ContextProvider({ children }) {
     return data.length;
   }
 
+  function createTableData() {
+    return data.map((elem, index) => {
+      return {
+        id: elem.id,
+        index: index + 1,
+        status: elem.isFakeNews ? "Fake" : "Echt",
+        answer: "Keine Antwort",
+      };
+    });
+  }
+
+  function updateTable() {
+    setTableData((prevTable) => {
+      return prevTable.map((elem) => {
+        if (elem.id === currentQuestion.id) {
+          return { ...elem, answer: convertAnswerToText(sliderValue) };
+        } else {
+          return elem;
+        }
+      });
+    });
+  }
+
+  function convertAnswerToText(answer) {
+    switch (answer) {
+      case 0:
+        return "Fake";
+        break;
+      case 1:
+        return "Eher Fake";
+        break;
+      case 2:
+        return "Kann es nicht sagen";
+        break;
+      case 3:
+        return "Eher Echt";
+        break;
+      case 4:
+        return "Echt";
+        break;
+
+      default:
+        break;
+    }
+  }
+
   return (
     <Context.Provider
       value={{
@@ -183,6 +232,7 @@ function ContextProvider({ children }) {
         inInterventionGroup,
         currentQuestionIndex,
         fakeNewsDetection,
+        tableData,
         handleStarsValueChange,
         resetGame,
         changeSliderValue,
