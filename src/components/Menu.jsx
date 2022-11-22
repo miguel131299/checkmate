@@ -29,13 +29,13 @@ export default function Menu() {
         {showFeedback && inInterventionGroup && getFeedbackElements()}
       </div>
       <div className="menu--logo-container">
-        <Link to="/">
-          <img
-            className="menu--logo"
-            src="./images/CheckMate Logo Transparent Background.png"
-            alt="Checkmate Logo"
-          />
-        </Link>
+        {/* <Link> */}
+        <img
+          className="menu--logo"
+          src="./images/CheckMate Logo Transparent Background.png"
+          alt="Checkmate Logo"
+        />
+        {/* </Link> */}
         <p className="menu--logo-slogan">Ein Projekt der TUM: Junge Akademie</p>
       </div>
     </div>
