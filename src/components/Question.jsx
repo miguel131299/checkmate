@@ -69,8 +69,8 @@ export default function Question() {
             {...props}
             sx={{
               backgroundColor: "#E9FDF5",
-              "& .MuiLinearProgress-bar1": {
-                backgroundColor: "#000000",
+              "& .MuiLinearProgress-bar": {
+                backgroundColor: "#90dea4",
               },
             }}
           />
