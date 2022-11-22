@@ -20,7 +20,13 @@ export default function Menu() {
       );
     });
 
-    return elements;
+    const fakeNewsStatus = (
+      <div className="menu--feedback-section">
+        Dieser Artikel ist {currentQuestion.isFakeNews ? "fake" : "echt"}
+      </div>
+    );
+
+    return [fakeNewsStatus, ...elements];
   }
 
   return (
