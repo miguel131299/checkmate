@@ -60,6 +60,10 @@ export default function Question() {
     }
   }
 
+  function getColorOfBar() {
+    return inInterventionGroup ? "#194e51" : "#90dea4";
+  }
+
   function LinearProgressWithLabel(props) {
     return (
       <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -70,7 +74,7 @@ export default function Question() {
             sx={{
               backgroundColor: "#E9FDF5",
               "& .MuiLinearProgress-bar": {
-                backgroundColor: "#90dea4",
+                backgroundColor: getColorOfBar(),
               },
             }}
           />
