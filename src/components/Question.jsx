@@ -61,7 +61,7 @@ export default function Question() {
   }
 
   function getColorOfBar() {
-    return inInterventionGroup ? "#194e51" : "#90dea4";
+    return inInterventionGroup ? "#0aa008" : "#90dea4";
   }
 
   function LinearProgressWithLabel(props) {

@@ -58,18 +58,20 @@ function getWidth() {
   return innerWidth;
 }
 
-getWidth();
-
 export default function DiscreteSliderMarks(props) {
   // use to reset value of slider
 
-  const { currentQuestion } = useContext(Context);
+  const { currentQuestion, inInterventionGroup } = useContext(Context);
+
+  function getColorOfBar() {
+    return inInterventionGroup ? "#0aa008" : "#90dea4";
+  }
 
   return (
     <Box sx={{ width: getWidth() > 992 ? 600 : 300 }}>
       <Slider
         key={currentQuestion.id}
-        sx={{ color: "#90dea4" }}
+        sx={{ color: getColorOfBar() }}
         defaultValue={2}
         marks={getMarks()}
         min={0}
