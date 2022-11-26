@@ -52,7 +52,7 @@ function Registration() {
                   placeholder="18"
                   onChange={handleRegistrationChange}
                   name="age"
-                  value={user.age}
+                  // value={user.age}
                 />
               </label>
             </div>
@@ -105,7 +105,7 @@ function Registration() {
                   placeholder="3"
                   onChange={handleRegistrationChange}
                   name="mediaConsumption"
-                  value={user.mediaConsumption}
+                  // value={user.mediaConsumption}
                 />
               </label>
             </div>
@@ -129,6 +129,18 @@ function Registration() {
                 </div>
               </label>
             </div>
+            <div className="registration--field-container">
+              <label htmlFor="session-id">
+                Session: <br />
+                <input
+                  type="text"
+                  onChange={handleRegistrationChange}
+                  name="sessionID"
+                  // value={user.sessionID}
+                />
+              </label>
+            </div>
+
             <Link to="/game" style={{ textDecoration: "none" }}>
               <div className="submit-container">
                 <input

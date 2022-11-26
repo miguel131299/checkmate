@@ -1,5 +1,5 @@
 import { Context } from "../Context";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "../styles/Question.css";
 import DiscreteSliderMarks from "./DiscreteSliderMarks";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { useElapsedTime } from "use-elapsed-time";
 
 export default function Question() {
   const {
@@ -96,6 +97,16 @@ export default function Question() {
     value: PropTypes.number.isRequired,
   };
 
+  const { elapsedTime, reset } = useElapsedTime({
+    isPlaying: true,
+    updateInterval: 1,
+    // onUpdate: (time) => console.log(`${time} seconds elapsed`),
+  });
+
+  useEffect(() => {
+    reset();
+  }, [currentQuestion]);
+
   return (
     <div className="question-container">
       <Box sx={{ width: "90%", marginBottom: "2em" }}>
@@ -120,7 +131,12 @@ export default function Question() {
           </Link>
         )}
         {!showEndGameButton && (
-          <button className="question--answer-button" onClick={buttonClick}>
+          <button
+            className="question--answer-button"
+            onClick={() => {
+              buttonClick(elapsedTime);
+            }}
+          >
             {showFeedback ? "Nächste Frage" : "Beantworten"}
           </button>
         )}

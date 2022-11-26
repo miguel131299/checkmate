@@ -58,15 +58,17 @@
 }
 
 .registration--field-container {
-  margin: 1em 0;
+  margin: 0.6em 0;
   font-size: 1.2rem;
 }
 
+input[type="text"],
 input[type="number"] {
   background-color: var(--light-gray);
   padding: 1em;
 }
 
+input[type="text"],
 input[type="number"],
 input[type="range"] {
   width: 100%;

@@ -29,6 +29,7 @@ function ContextProvider({ children }) {
   const [sliderValue, setSliderValue] = useState(2);
   const [user, setUser] = useState({
     id: -99,
+    sessionID: "afterSeminar",
     age: 0,
     gender: "noAnswer",
     mediaConsumption: 0,
@@ -37,9 +38,9 @@ function ContextProvider({ children }) {
   const [showEndGameButton, setShowEndGameButton] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   const [inInterventionGroup, setInInterventionGroup] = useState(true);
-  const [sessionID, setSessionID] = useState("NO_SESSION");
   const [fakeNewsDetection, setFakeNewsDetection] = useState(0);
   const [tableData, setTableData] = useState(createTableData());
+  const [inGame, setInGame] = useState(false);
 
   function handleRegistrationChange(event) {
     const { name, value } = event.target;
@@ -69,10 +70,12 @@ function ContextProvider({ children }) {
     });
   }
 
-  function buttonClick() {
-    updateTable();
-    submitAnswer();
-    setSliderValue(2);
+  function buttonClick(elapsedTime) {
+    if (!showFeedback) {
+      submitAnswer(elapsedTime);
+      updateTable();
+      setSliderValue(2);
+    }
 
     if (inInterventionGroup) {
       if (showFeedback) {
@@ -106,52 +109,46 @@ function ContextProvider({ children }) {
   }
 
   function registerUser() {
-    fetch("https://api.checkmate.schnack.dev/session")
-      .then((response) => response.json(response))
+    const params = {
+      session_id: user.sessionID,
+      age: user.age,
+      gender: user.gender,
+      media_consumption: user.mediaConsumption,
+      fake_news_detection_ability: fakeNewsDetection,
+    };
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(params),
+    };
+
+    fetch("https://api.checkmate.schnack.dev/register", options)
+      .then((response) => response.json())
       .then((data) => {
-        let session = data["session_id"];
-        setSessionID(session);
+        console.log("Success:", data);
 
-        const params = {
-          session_id: session,
-          age: user.age,
-          gender: user.gender,
-          media_consumption: user.mediaConsumption,
-          fake_news_detection_ability: fakeNewsDetection,
-        };
+        // set User ID
+        setUser((prevUser) => {
+          return { ...prevUser, id: data.id };
+        });
 
-        const options = {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(params),
-        };
-
-        fetch("https://api.checkmate.schnack.dev/register", options)
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Success:", data);
-
-            // set User ID
-            setUser((prevUser) => {
-              return { ...prevUser, id: data.id };
-            });
-
-            setInInterventionGroup(data.treatment);
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
+        setInInterventionGroup(data.treatment);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
       });
   }
 
-  function submitAnswer() {
+  function submitAnswer(responseTime) {
     const params = {
-      session_id: sessionID,
+      session_id: user.sessionID,
       participant: user.id,
       question: currentQuestion.id,
       choice: sliderValue,
+      response_time: responseTime,
     };
 
     const options = {
@@ -233,6 +230,7 @@ function ContextProvider({ children }) {
         currentQuestionIndex,
         fakeNewsDetection,
         tableData,
+        inGame,
         handleStarsValueChange,
         resetGame,
         changeSliderValue,
