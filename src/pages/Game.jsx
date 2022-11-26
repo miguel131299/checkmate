@@ -9,6 +9,8 @@ function Game() {
       //   return undefined;
       // }
 
+      console.log("beforeunload");
+
       var confirmationMessage =
         "It looks like you have been editing something. " +
         "If you leave before saving, your changes will be lost.";
