@@ -1,5 +1,5 @@
 import { Context } from "../Context";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import "../styles/Question.css";
 import DiscreteSliderMarks from "./DiscreteSliderMarks";
 import { Link } from "react-router-dom";
@@ -20,6 +20,8 @@ export default function Question() {
     getNumberOfQuestions,
     currentQuestionIndex,
   } = useContext(Context);
+
+  const questionContainer = useRef();
 
   function showPictures() {
     if (inInterventionGroup && showFeedback) {
@@ -108,7 +110,7 @@ export default function Question() {
   }, [currentQuestion]);
 
   return (
-    <div className="question-container">
+    <div className="question-container" ref={questionContainer}>
       <Box sx={{ width: "90%", marginBottom: "2em" }}>
         <LinearProgressWithLabel
           value={(currentQuestionIndex / getNumberOfQuestions()) * 100}
@@ -134,6 +136,12 @@ export default function Question() {
           <button
             className="question--answer-button"
             onClick={() => {
+              questionContainer.current.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              });
+
               buttonClick(elapsedTime);
             }}
           >
