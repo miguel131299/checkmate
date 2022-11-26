@@ -31,13 +31,13 @@ export default function End() {
           <div className="end--table-container">
             <BasicTable />
           </div>
-          <div className="end--content-button-container">
+          {/* <div className="end--content-button-container">
             <Link to="/game">
               <button className="end--content-button" onClick={resetGame}>
                 Nochmal versuchen
               </button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="end--image-container">
