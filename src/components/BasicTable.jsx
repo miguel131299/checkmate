@@ -32,7 +32,7 @@ export default function BasicTable() {
                 fontWeight: "bold",
               }}
             >
-              Article
+              Artikel
             </TableCell>
             <TableCell
               sx={{
@@ -63,7 +63,7 @@ export default function BasicTable() {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                Article #{row.index}
+                Artikel #{row.index}
               </TableCell>
               <TableCell align="right">{row.status}</TableCell>
               <TableCell align="right">{row.answer}</TableCell>
