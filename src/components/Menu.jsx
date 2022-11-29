@@ -42,9 +42,7 @@ export default function Menu() {
           alt="Checkmate Logo"
         />
         {/* </Link> */}
-        <p className="menu--logo-slogan">
-          Ein Projekt der TUM: Junge Akademie {currentQuestion.id}
-        </p>
+        <p className="menu--logo-slogan">Ein Projekt der TUM: Junge Akademie</p>
       </div>
     </div>
   );
