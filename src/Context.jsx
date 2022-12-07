@@ -64,7 +64,7 @@ function ContextProvider({ children }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [sliderValue, setSliderValue] = useState(2);
   const [user, setUser] = useState({
-    id: getRandomInt(1, 100000),
+    id: getRandomInt(1, 1000),
     sessionID: "afterSeminar",
     age: 0,
     gender: "noAnswer",
