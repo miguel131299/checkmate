@@ -21,6 +21,12 @@ function shuffle(array) {
   return array;
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const Context = React.createContext();
 
 function ContextProvider({ children }) {
@@ -28,7 +34,7 @@ function ContextProvider({ children }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [sliderValue, setSliderValue] = useState(2);
   const [user, setUser] = useState({
-    id: -99,
+    id: getRandomInt(-100000, -1),
     sessionID: "afterSeminar",
     age: 0,
     gender: "noAnswer",
