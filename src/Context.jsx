@@ -48,11 +48,9 @@ function treatmentToInt(inInterventionGroup) {
 }
 
 function codeID(gender, mediaConsumption, inInterventionGroup, randomID) {
-  const string = `99${genderToInt(
-    gender
-  )}99${mediaConsumption}99${treatmentToInt(
+  const string = `9${genderToInt(gender)}9${mediaConsumption}9${treatmentToInt(
     inInterventionGroup
-  )}99${randomID}99`;
+  )}9${randomID}`;
 
   return parseInt(string);
 }
