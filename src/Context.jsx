@@ -27,6 +27,36 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function genderToInt(gender) {
+  switch (gender) {
+    case "male":
+      return 0;
+      break;
+    case "female":
+      return 1;
+      break;
+    case "diverse":
+      return 2;
+    default:
+      return 3;
+      break;
+  }
+}
+
+function treatmentToInt(inInterventionGroup) {
+  return inInterventionGroup ? 1 : 0;
+}
+
+function codeID(gender, mediaConsumption, inInterventionGroup, randomID) {
+  const string = `99${genderToInt(
+    gender
+  )}99${mediaConsumption}99${treatmentToInt(
+    inInterventionGroup
+  )}99${randomID}99`;
+
+  return parseInt(string);
+}
+
 const Context = React.createContext();
 
 function ContextProvider({ children }) {
@@ -34,7 +64,7 @@ function ContextProvider({ children }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [sliderValue, setSliderValue] = useState(2);
   const [user, setUser] = useState({
-    id: getRandomInt(-100000, -1),
+    id: getRandomInt(1, 100000),
     sessionID: "afterSeminar",
     age: 0,
     gender: "noAnswer",
@@ -43,7 +73,9 @@ function ContextProvider({ children }) {
   const [lastQuestion, setLastQuestion] = useState(false);
   const [showEndGameButton, setShowEndGameButton] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
-  const [inInterventionGroup, setInInterventionGroup] = useState(true);
+  const [inInterventionGroup, setInInterventionGroup] = useState(
+    Math.random() > 0.5
+  );
   const [fakeNewsDetection, setFakeNewsDetection] = useState(0);
   const [tableData, setTableData] = useState(createTableData());
   const [inGame, setInGame] = useState(false);
@@ -145,6 +177,18 @@ function ContextProvider({ children }) {
       })
       .catch((error) => {
         console.error("Error:", error);
+        // set coded userID
+        setUser((prevUser) => {
+          return {
+            ...prevUser,
+            id: codeID(
+              user.gender,
+              user.mediaConsumption,
+              inInterventionGroup,
+              user.id
+            ),
+          };
+        });
       });
   }
 
