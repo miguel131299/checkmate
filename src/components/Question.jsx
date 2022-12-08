@@ -66,8 +66,7 @@ export default function Question() {
   }
 
   function notify() {
-    console.log(inInterventionGroup, currentQuestionIndex);
-    if (inInterventionGroup && currentQuestionIndex == 0) {
+    if (inInterventionGroup && currentQuestionIndex == 0 && !showFeedback) {
       toast.success(
         "Hier siehst du typische Merkmale des Artikels. Diese helfen dir bei den nächsten Artikeln die richtige Antwort auszuwählen.",
         {
