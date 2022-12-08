@@ -16,6 +16,22 @@ export default [
     ],
   },
   {
+    id: 136,
+    isFakeNews: true,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Ungewöhnlich formuliertes Thema",
+        color: "#4CA4E8",
+      },
+      {
+        text: "Keine Nennung von Details (Schulname, Datum) zum Vorfall",
+        color: "#6AA84F",
+      },
+    ],
+  },
+  {
     id: 7,
     isFakeNews: false,
     hasHeader: true,
@@ -88,18 +104,6 @@ export default [
     ],
   },
   {
-    id: 17,
-    isFakeNews: false,
-    hasHeader: true,
-    hasText: true,
-    feedback: [
-      {
-        text: "Kritischer Text ohne dabei drohend, reißerisch oder provokant zu sein ",
-        color: "#D9181C",
-      },
-    ],
-  },
-  {
     id: 147,
     isFakeNews: true,
     hasHeader: false,
@@ -112,6 +116,18 @@ export default [
       {
         text: "Gramatikfehler",
         color: "#EE2821",
+      },
+    ],
+  },
+  {
+    id: 17,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Kritischer Text ohne dabei drohend, reißerisch oder provokant zu sein ",
+        color: "#D9181C",
       },
     ],
   },
@@ -132,6 +148,23 @@ export default [
     ],
   },
   {
+    id: 5,
+    isFakeNews: false,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Seriöse Zeitung",
+        color: "#4CA4E8",
+      },
+      {
+        text: "Autorin wird vorgestellt, welche ein Interview durchgeführt hat",
+        color: "#6AA84F",
+      },
+    ],
+  },
+
+  {
     id: 143,
     isFakeNews: true,
     hasHeader: true,
@@ -147,6 +180,27 @@ export default [
       },
     ],
   },
+  {
+    id: 113,
+    isFakeNews: true,
+    hasHeader: true,
+    hasText: true,
+    feedback: [
+      {
+        text: "Fehlende Einordnung des Zitats in den Kontext",
+        color: "#4CA4E8",
+      },
+      {
+        text: "Aufbau einer Verschwörungstheorie",
+        color: "#6AA84F",
+      },
+      {
+        text: "Emotionsgeladene Sprache",
+        color: "#EE2821",
+      },
+    ],
+  },
+
   {
     id: 152,
     isFakeNews: true,
@@ -164,38 +218,6 @@ export default [
       {
         text: "Wertung und anhaltslose Unterstellung",
         color: "#EE2821",
-      },
-    ],
-  },
-  {
-    id: 136,
-    isFakeNews: true,
-    hasHeader: true,
-    hasText: true,
-    feedback: [
-      {
-        text: "Ungewöhnlich formuliertes Thema",
-        color: "#4CA4E8",
-      },
-      {
-        text: "Keine Nennung von Details (Schulname, Datum) zum Vorfall",
-        color: "#6AA84F",
-      },
-    ],
-  },
-  {
-    id: 5,
-    isFakeNews: false,
-    hasHeader: true,
-    hasText: true,
-    feedback: [
-      {
-        text: "Seriöse Zeitung",
-        color: "#4CA4E8",
-      },
-      {
-        text: "Autorin wird vorgestellt, welche ein Interview durchgeführt hat",
-        color: "#6AA84F",
       },
     ],
   },
@@ -356,26 +378,6 @@ export default [
       {
         text: "Post-Verantwortliche namentlich erwähnt",
         color: "#6AA84F",
-      },
-    ],
-  },
-  {
-    id: 113,
-    isFakeNews: true,
-    hasHeader: true,
-    hasText: true,
-    feedback: [
-      {
-        text: "Fehlende Einordnung des Zitats in den Kontext",
-        color: "#4CA4E8",
-      },
-      {
-        text: "Aufbau einer Verschwörungstheorie",
-        color: "#6AA84F",
-      },
-      {
-        text: "Emotionsgeladene Sprache",
-        color: "#EE2821",
       },
     ],
   },
