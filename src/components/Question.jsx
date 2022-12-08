@@ -8,6 +8,8 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useElapsedTime } from "use-elapsed-time";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Question() {
   const {
@@ -59,6 +61,25 @@ export default function Question() {
             ></img>
           )}
         </div>
+      );
+    }
+  }
+
+  function notify() {
+    console.log(inInterventionGroup, currentQuestionIndex);
+    if (inInterventionGroup && currentQuestionIndex == 0) {
+      toast.success(
+        "Hier siehst du typische Merkmale des Artikels. Diese helfen dir bei den nächsten Artikeln die richtige Antwort auszuwählen.",
+        {
+          position: "top-right",
+          autoClose: 10000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        }
       );
     }
   }
@@ -142,6 +163,8 @@ export default function Question() {
                 behavior: "smooth",
               });
 
+              notify();
+
               buttonClick(elapsedTime);
             }}
           >
@@ -149,6 +172,7 @@ export default function Question() {
           </button>
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 }
