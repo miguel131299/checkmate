@@ -53,6 +53,7 @@ function Registration() {
                   onChange={handleRegistrationChange}
                   name="age"
                   // value={user.age}
+                  min={0}
                 />
               </label>
             </div>
